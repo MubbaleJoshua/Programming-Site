@@ -11,6 +11,8 @@ color:white;
 
 header{
 background-image: url(mmu.JPG);
+background-size: cover;
+background-position: center;
 color: white;
 padding:20px;
 text-align:center;
