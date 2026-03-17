@@ -16,12 +16,12 @@ padding:20px;
 text-align:center;
 }
 
-header img{
-  width: 100px;
-  height: 100px;
-  border: 1px;
-  border-radius: 50%;
-  {
+.img{
+ width: 100px;
+ height: 100px;
+ border: 1px;
+ border-radius: 50%;
+ {
 
 nav{
 background:#222;
