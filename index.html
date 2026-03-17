@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Programming Academy</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+
+<header>
+
+<h1>Programming Academy</h1>
+<p>Learn Programming Step by Step</p>
+
+<button onclick="toggleMode()">Dark Mode</button>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="html-basics.html">HTML</a>
+<a href="css-basics.html">CSS</a>
+<a href="javascript-basics.html">JavaScript</a>
+<a href="c-basics.html">C Programming</a>
+
+</nav>
+
+<div class="layout">
+
+<div class="sidebar">
+
+<h3>Courses</h3>
+
+<a href="html-basics.html">HTML Basics</a>
+<a href="css-basics.html">CSS Basics</a>
+<a href="javascript-basics.html">JavaScript Basics</a>
+<a href="c-basics.html">C Programming Basics</a>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+
+<h2>Welcome to Programming Academy</h2>
+
+<p>
+
+Programming is the process of creating instructions that computers follow to perform tasks.
+
+These instructions are written using programming languages.
+
+</p>
+
+<p>
+
+Learning programming allows you to build:
+
+</p>
+
+<ul>
+
+<li>Websites</li>
+<li>Mobile applications</li>
+<li>Software systems</li>
+<li>Games</li>
+<li>Artificial intelligence</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Learning Path</h2>
+
+<ol>
+
+<li>Learn HTML (structure of web pages)</li>
+<li>Learn CSS (design and layout)</li>
+<li>Learn JavaScript (interactivity)</li>
+<li>Learn a general programming language such as C or Python</li>
+<li>Build projects</li>
+
+</ol>
+
+</div>
+
+</div>
+
+</div>
+  
+
+<script src="script.js"></script>
+  
+  <section id="contact">
+
+<h2>Contact Me</h2>
+<p>If you'd like to collaborate or ask a question, feel free to reach out.</p>
+
+<div class="contact-icons">
+
+<a href="mailto:youremail@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
+
+<a href="https://github.com/mubbalejoshua" target="_blank">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+
+<a href="#" target="_blank">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+
+</div>
+
+
+<form id="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+<p id="status"></p>
+
+</form>
+
+</section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+
+(function(){
+emailjs.init("6hSuB2vxQhLKp3rH6");
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_sxib4lk",
+"template_btr9t0s",
+this
+)
+
+.then(function(){
+
+document.getElementById("status").innerHTML =
+"Message sent successfully!";
+
+document.getElementById("contact-form").reset();
+
+},
+
+function(error){
+
+document.getElementById("status").innerHTML =
+"Failed to send message.";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
