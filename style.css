@@ -10,11 +10,18 @@ color:white;
 }
 
 header{
-background:#0b3d91;
-color:white;
+background-image: url(mmu.jpg);
+color: white;
 padding:20px;
 text-align:center;
 }
+
+header img{
+  width: 150px;
+  height: 150px;
+  border: 1px;
+  border-radius: 50%;
+  {
 
 nav{
 background:#222;
