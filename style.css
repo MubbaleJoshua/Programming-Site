@@ -27,6 +27,19 @@ header img{
  border-radius: 75%;
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 nav{
 background:#222;
 padding:12px;
